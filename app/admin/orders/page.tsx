@@ -6,7 +6,7 @@ export default function OrdersPage() {
   const [orders, setOrders] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost/tailor-system/api/get_orders.php")
+    fetch("https://tailor-project-z2hy.vercel.app/api/get_orders.php")
       .then((res) => res.json())
       .then((data) => {
         setOrders(data.orders || []);

@@ -8,7 +8,7 @@ export default function DashboardPage() {
   const [pending, setPending] = useState(0);
 
   useEffect(() => {
-    fetch("http://localhost/tailor-system/api/get_orders.php")
+    fetch("https://tailor-admin.great-site.net/api/get_orders.php")
       .then((res) => res.json())
       .then((data) => {
         setOrders(data.orders || []);
