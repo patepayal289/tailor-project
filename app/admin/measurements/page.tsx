@@ -27,7 +27,7 @@ export default function MeasurementsPage() {
   const fetchHistory = async () => {
     try {
       const res = await fetch(
-        "http://127.0.0.1/tailor-system/api/get_measurements.php"
+        "https://tailor-admin.great-site.net/api/get_measurements.php"
       );
       const data = await res.json();
       setHistory(data || []);
@@ -45,7 +45,7 @@ export default function MeasurementsPage() {
 
     try {
       await fetch(
-        "http://127.0.0.1/tailor-system/api/save_measurement.php",
+       "https://tailor-admin.great-site.net/api/save_measurement.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -75,7 +75,7 @@ export default function MeasurementsPage() {
   const deleteMeasurement = async (id: number) => {
     try {
       const res = await fetch(
-        "http://127.0.0.1/tailor-system/api/delete_measurement.php",
+       "https://tailor-admin.great-site.net/api/delete_measurement.php",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
